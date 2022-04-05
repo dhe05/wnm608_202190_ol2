@@ -17,7 +17,7 @@
 
 	 		<p>This is item # <?= $_GET['id'] ?></p>
 	 	
-	 		
+	 		</div>
 	 </div>
 </body>
 </html>
