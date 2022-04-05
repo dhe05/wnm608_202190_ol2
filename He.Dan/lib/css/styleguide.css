@@ -35,6 +35,13 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 a {
     color: inherit;
     font-weight: 500;
@@ -415,6 +422,8 @@ form input {
 /* Figure */
 
 .figure {
+    position: relative;
+    text-align: center;
     margin: 0;
     background-color: var(--color-white);
 }
