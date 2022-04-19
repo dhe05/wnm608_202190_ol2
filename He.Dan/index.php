@@ -4,13 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 		<?php include "parts/meta.php"; ?>
-	<title>Home</title>
+	<title>eNest</title>
 </head>
 <body>
 	<?php include "parts/navbar.php"; ?>
 	
 	    <figure class="figure">
-	    	 <div class="centered">Make Your Home Smart</div>
+	    	 <div class="centered"></div>
                 <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
               
             </figure>
