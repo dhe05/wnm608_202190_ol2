@@ -1,12 +1,19 @@
 <?php
+include_once "../lib/php/functions.php";
 
-include "../lib/php/functions.php";
+ //$filename = "notes.json";
+ //$file = file_get_contents($filename);
+ //$notes_object = json_decode($file);
 
 
-$notes_objects = file_get_json("notes.json");
-$users_array = file_get_json("../data/users/json");
+ //$filename = "notes.json";
+ //$file = file_get_contents($filename);
+ //$notes_object = json_decode($file);
 
-// print_p($notes);
+
+$notes_object = file_get_json("notes.json");
+$users_array = file_get_json("../data/users.json");
+ //print_p($notes);
 
 ?>
 
@@ -15,43 +22,51 @@ $users_array = file_get_json("../data/users/json");
 <head>
 	<meta charset="UTF-8">
 	<title>Reading Data</title>
-
 	<?php include "../parts/meta.php"; ?>
 
 </head>
+
 <body>
-
-	<?php include "../parts/navbar.php"; ?>
-
-	 <div class="container">
-	 	<div class="card soft">
-	 		<h2>Notes</h2>
-	 	<?php
+	<?php include "../parts/navbar.php";?>
 
 
-	 	for($i=0;$i<count($notes_objects->notes);$i++){
-	 		echo "<li>{$notes_objects->notes[$i]}</li>";
+	<div class="container">
+		<div class="card soft">
+			<h2>Notes</h2>
 
-	 	}
+			<?php
 
-	 	?>
+			for ($i=0;$i<count($notes_object->notes);$i++) {
+				echo "<li>{$notes_object->notes[$i]}</li>";
 
-	 		<div class="card soft">
-	 		<h2>Users</h2>
-	 	<?php
+			}
+			?>
 
 
-	 	for($i=0;$i<count($users_array);$i++){
-	 		echo "<li>
-	 			<strong>{$users_array[$i]->name}</strong>
-	 			<span>{$users_array[$i]->type}</span>
-	 		</li>";
+			
+		</div>
 
-	 	}
 
-	 	?>
-	 	
-	 		</div>
-	 </div>
+		
+		<div class="card soft">
+			<h2>Users</h2>
+
+			<?php
+
+			for($i=0;$i<count($users_array);$i++){
+				echo "<li>
+				<strong>{$users_array[$i]->name}</strong>
+				<span>{$users_array[$i]->type}</span>
+				</li>";
+
+			}
+
+			?>
+
+
+
+		</div>
+	</div>
+
 </body>
 </html>
