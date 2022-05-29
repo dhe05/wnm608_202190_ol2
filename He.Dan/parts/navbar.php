@@ -1,17 +1,31 @@
-<base href="http://danhedesign.com/aau/wnm608/He.Dan/">	
+<?php 
+	include_once "lib/php/functions.php";
+
+?>
+<input type="checkbox" id="menu" class="hidden">
 	<header class="navbar">
-		<div class="container display-flex"> 
-			<div class="flex-none">
-				<h1>eNest</h1>
-		</div>
-	
-		<div class="flex-stretch">
-		<nav class="nav nav-flex flex-none">	
-			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="product_list.php">Store</a></li>
-				<li><a href="about.php">About</a></li>
-			</ul>
-		</nav>
-		</div>
-	 </header>
+		<div class="container display-flex">
+			<div class="flex-stretch logo">
+				<img class="logo-img" src="img/gold-watch.jpg">
+			</div>
+			<div class="flex-stretch title"><h1>Gilded</h1></div>
+			<!-- nav.nav>ul>li*4>a[href=#article$]>{link$ -->
+			<div class="flex-none menu-button">
+				<label for="menu">&equiv;</label>
+			</div>
+			<nav class="flex-stretch nav main-nav">
+		<ul class="container display-flex">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="about.php">About</a></li>
+			<li><a href="product_list.php">Products</a></li>
+			<li><a href="cart.php">
+				<span>Cart</span>
+				<span class="badgs"><?=makeCartBadge(); ?></span>
+
+				</a></li>
+			<li><a href="styleguide/index.php">Styleguide</a></li>
+			
+		</ul>
+	</nav>
+</div>
+</header>
